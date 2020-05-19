@@ -3,11 +3,6 @@
 namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Responses\Response as ResponseJson;
-// Facades
-use Tymon\JWTAuth\Facades\JWTAuth;
-
-use App\Http\Requests\Auth\LoginRequest;
-// responses
 // Codes Responses
 use Symfony\Component\HttpFoundation\Response;
 use Validator;

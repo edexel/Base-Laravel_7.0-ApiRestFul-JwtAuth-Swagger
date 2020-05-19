@@ -3,15 +3,11 @@
 namespace App\Http\Controllers\Admin\Usuario;
 
 use App\Http\Responses\Response as ResponseJson;
-
 // Codes Responses
 use Symfony\Component\HttpFoundation\Response;
-
 use Illuminate\Http\Request;
 // Facades
 use Illuminate\Support\Facades\Hash;
-// Utils
-use App\Utils\JwtToken;
 //Models
 use App\DbModels\usuario;
 
