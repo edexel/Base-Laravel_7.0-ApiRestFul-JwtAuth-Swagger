@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Responses\Response as ResponseJson;
-// Codes Responses
+
+// responses
 use Symfony\Component\HttpFoundation\Response;
+
 use Validator;
 use Illuminate\Http\Request;
 // Facades
@@ -31,6 +33,38 @@ class LoginController
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     */
+
+ /**
+     * @OA\Post(
+     *     path="/admin/auth/login",
+     *     tags={"Auth"},
+     *     summary="Login de usuario",
+     *     operationId="Login",
+     *     @OA\Response(
+     *         response=405,
+     *         description="Invalid input"
+     *     ),
+     *     @OA\RequestBody(
+     *         description="Input data format",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *             @OA\Schema(
+     *                 type="object",
+     *                 @OA\Property(
+     *                     property="email",
+     *                     description="usuario del sistema",
+     *                     type="string",
+     *                 ),
+     *                 @OA\Property(
+     *                     property="password",
+     *                     description="contraseña de usuario",
+     *                     type="string"
+     *                 )
+     *             )
+     *         )
+     *     )
+     * )
      */
     public function __invoke(Request $oRequest)
     {
